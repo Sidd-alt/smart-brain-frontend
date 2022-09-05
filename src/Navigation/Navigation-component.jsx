@@ -1,4 +1,3 @@
-// import { NavbarContainer, SignInSignOutText } from "./Navigation-style";
 import { NavbarContainer, SignInSignOutText } from './Navigation-style';
 
 const Navigation = ({ isSignedIn,  route, onRouteChange }) => {

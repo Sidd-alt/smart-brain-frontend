@@ -10,7 +10,7 @@ const RegisterForm = ({ onRouteChange, loadUser }) => {
 
    const onSubmit = (e) => {
       if(email.length !== 0 && password.length !== 0 && name.length !== 0){
-         fetch("http://localhost:3003/register", {
+         fetch("https://dry-lake-63891.herokuapp.com/register", {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({

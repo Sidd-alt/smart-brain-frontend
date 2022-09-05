@@ -11,15 +11,6 @@ const FaceRecognition = ({ box, imageUrl }) => {
       </div>
     </div>
   )
-
-
-
-
-         {/* <FaceRecognitionContainer> */}
-            {/* <Image id="inputImage" src={imageUrl}  alt=""/> */}
-            {/* <BoundingBox style={{top: box.topRow, right: box.rightCol, bottom: box.bottomRow, left: box.leftCol}} box={box}></BoundingBox> */}
-            {/* <div style={{top: box.topRow, right: box.rightCol, bottom: box.bottomRow, left: box.leftCol}} className="bounding-box"></div> */}
-         {/* </FaceRecognitionContainer> */}
 }
 
 export default FaceRecognition;

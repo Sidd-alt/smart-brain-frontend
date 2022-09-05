@@ -6,14 +6,7 @@ import FaceRecognition from './FaceRecognition/FaceRecognition-component';
 import SignInForm from './SignInForm/SignInForm';
 import RegisterForm from './RegisterForm.jsx/RegisterForm';
 import EntriesCount from './EntriesCount/EntriesCount';
-import Clarifai from 'clarifai';
 import './App.css';
-
-// const app = new Clarifai.App({
-//    apiKey: 'a0a7fed94e2c4f72bdf8855669197c0d'
-// })
- 
-// API key'a0a7fed94e2c4f72bdf8855669197c0d'
 
 const initialState = {
    id: "",
@@ -63,7 +56,7 @@ function App() {
    const handleSubmit = () => {
       setImageUrl(inputText);
       // app.models.predict(Clarifai.FACE_DETECT_MODEL, inputText)
-      fetch("http://localhost:3003/imageInput", {
+      fetch("https://dry-lake-63891.herokuapp.com/imageInput", {
          method: 'post',
          headers: {'Content-Type': 'application/json'},
          body: JSON.stringify({inputText})
@@ -72,7 +65,7 @@ function App() {
       .then(response => {
          const { id } = userProfile
          if(response){
-            fetch("http://localhost:3003/image", {
+            fetch("https://dry-lake-63891.herokuapp.com/image", {
                method: 'put',
                headers: {'Content-Type': 'application/json'},
                body: JSON.stringify({ id })
